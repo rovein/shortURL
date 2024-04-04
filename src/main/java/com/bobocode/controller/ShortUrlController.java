@@ -41,7 +41,7 @@ public class ShortUrlController {
     @GetMapping("/{url}")
     public ResponseEntity<?> acceptShortUrl(@PathVariable("url") String shortenedUrl, HttpServletRequest request) {
         var originalUrl = this.shortUrlService.getInitialUrl(shortenedUrl);
-        if (!originalUrl.startsWith("http://")) {
+        if (!originalUrl.startsWith("http")) {
             originalUrl = "https://" + originalUrl;
         }
         return ResponseEntity.status(HttpStatusCode.valueOf(301))

@@ -8,6 +8,5 @@
     <input type="text" th:field="*{initialUrl}" placeholder="Put your url">
     <input type="submit" value="Submit">
 </form>
+<span th:if="${shortUrl} != ''" th:text="${shortUrl}" />
 </body>
-</html>
-</html>

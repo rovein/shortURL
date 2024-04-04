@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sample Form</title>
+</head>
+<body>
+<form action="#" th:action="@{/short-url}" th:object="${request}" method="post">
+    <input type="text" th:field="*{initialUrl}" placeholder="Put your url">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+</html>
